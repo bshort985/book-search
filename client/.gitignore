@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+mongodb+srv://bshort985:grunt03!!@cluster0.lrwvd.mongodb.net/project0?retryWrites=true&w=majority
