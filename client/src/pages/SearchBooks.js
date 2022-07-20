@@ -20,11 +20,10 @@ const SearchBooks = () => {
   const [searchInput, setSearchInput] = useState('');
   const [savedBookIds, setSavedBookIds] = useState(getSavedBookIds());
   const [saveBook, { error }] = useMutation(SAVE_BOOK);
-
   useEffect(() => {
     return () => saveBookIds(savedBookIds);
   });
- 
+
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
@@ -58,11 +57,8 @@ const SearchBooks = () => {
     }
   };
 
-
   const handleSaveBook = async (bookId) => {
     const bookToSave = searchedBooks.find((book) => book.bookId === bookId);
-
-    // get token
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
     if (!token) {

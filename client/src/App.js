@@ -13,7 +13,7 @@ import SavedBooks from './pages/SavedBooks';
 import Navbar from './components/Navbar';
 
 const httpLink = createHttpLink({
-  uri: 'graphql',
+  uri: '/graphql',
 });
 
 
@@ -48,8 +48,8 @@ function App() {
               element={<SavedBooks />} 
             />
             <Route 
-              // path="*" 
-              // element={<h1 className="display-2">Wrong page!</h1>} 
+              path="*" 
+              element={<h1 className="display-2">Wrong page!</h1>} 
             />
           </Routes>
         </>
